@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+  <link rel="stylesheet" href="style/app.css">
+  <link rel="stylesheet" href="style/bootstrap.css">
+  <link rel="stylesheet" href="style/bootstrap-theme.css">
+  <link rel="stylesheet" href="style/nv.d3.css">
+  <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+  <ul class="menu">
+    <li><a href="#/wizard">wizard with inherited scope</a></li>
+    <li><a href="#/thirdPartyComponent">using third party components</a></li>
+	<li><a href="#/directiveWithInheritedScope">directive with inherited scope</a></li>
+	<li><a href="#/directiveWithIsolatedScope">directive with isolated scope</a></li>
+	<li><a href="#/testTable">test table</a></li>
+	<li><a href="#/date">ng model example</a></li>
+	
+  </ul>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <div class="container">
+    <div ng-view></div>
+  </div>
+
+
+  <div>Angular seed app: v<span app-version></span></div>
+
+  <!--angular-->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <!--our app-->
+  <script src="app.js"></script>
+  <script src="WizardDirectiveWithSharedScope/wizard.js"></script>
+  <script src="ThirdPartyDirective/thirdPartyComponent.js"></script>
+  <script src="DirectiveWithInheritedScope/directiveInheritedScope.js"></script>
+  <script src="DirectiveWithIsolatedScope/isolatedScope.js"></script>
+  <script src="DirectiveManipulatingDOM/testTable.js"></script>
+  <script src="DirectiveRequiresNgModel/date.js"></script>
+  <!--outside dependencies-->
+  <script src="packages/angularjs-nvd3-directives.js"></script>
+  <script src="packages/d3.js"></script>
+  <script src="packages/nv.d3.js"></script>
+  <script src="packages/jquery-2.1.3.min.js"></script>
+  <script src="packages/bootstrap.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>
